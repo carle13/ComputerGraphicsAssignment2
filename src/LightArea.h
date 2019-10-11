@@ -26,6 +26,9 @@ public:
 		, m_e2(p3 - p0)
 	{ 
 		// --- PUT YOUR CODE HERE ---
+		m_normal = m_e1.cross(m_e2);
+		m_area = norm(m_normal);
+		m_normal = normalize(m_normal);
 	}  
 
 	virtual std::optional<Vec3f> Illuminate(Ray& ray) override
